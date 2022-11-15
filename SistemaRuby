@@ -1,0 +1,104 @@
+# PROJETO SISTEMA DE CADASTRO DE PRODUTOS
+
+
+#produtos cadastrados
+
+
+
+
+
+
+def menu
+    
+    puts "----------------------------------------------------------------"
+    puts "                     SISTEMA DE PRODUTOS                        "
+    puts "----------------------------------------------------------------"
+    puts "                                                                "
+    puts "                  [01] CADASTRAR PRODUTOS                       "
+    puts "                  [02] LISTAR TODOS OS PRODUTOS                 "
+    puts "                  [03] EXCLUIR PRODUTO                          "
+    puts "                  [04] ANALISE DE ESTOQUE                       "
+    puts "                                                                "
+    puts "----------------------------------------------------------------"
+    
+    
+end
+
+
+
+def login
+    
+    
+    puts "----------------------------------------------------------------"
+    puts "                      LOGIN  DE ACESSO                          "
+    puts "----------------------------------------------------------------"
+    puts "* Digite seu login: "
+    login = gets.chomp 
+    
+    
+    puts "* Digite a sua senha: "
+    senha = gets.chomp
+    
+    
+    if login == "adm" && senha == "123"
+        
+        menu()
+        
+    else 
+        puts "Acesso Negado! Login ou senha errado."
+        
+    end
+    
+    puts "----------------------------------------------------------------"
+    
+    
+end
+  
+    
+def menu
+    produtos = ["Teclado","Mouse","Monitor","Pendriver","Estabilizador","Caixa de Som"]
+    novoProduto =" "
+    
+    puts "----------------------------------------------------------------"
+    puts "                     SISTEMA DE PRODUTOS                        "
+    puts "----------------------------------------------------------------"
+    puts "                                                                "
+    puts "                  [01] CADASTRAR PRODUTOS                       "
+    puts "                  [02] LISTAR TODOS OS PRODUTOS                 "
+    puts "                  [03] EXCLUIR PRODUTO                          "
+    puts "                  [04] ANALISE DE ESTOQUE                       "
+    puts "                                                                "
+    puts "----------------------------------------------------------------"
+    puts "    Digite a  Opção: "
+    opcao = gets.chomp
+    
+    if opcao == "1" 
+    
+   
+    puts "-------------------- CADASTRO DE NOVO PRODUTO -------------------"
+    puts "Digite para adiconar novo produto: "
+        novoProduto == gets.chomp
+        produtos << novoProduto    
+         
+        
+        elsif opcao == "2"
+    puts "---------------------- LISTA DE PRODUTOS ------------------------"
+            puts produtos
+            
+            
+        elsif opcao == "3" 
+            puts "Excluir produto"
+           
+        elsif opcao == "4" 
+            puts "Analise de estoque" 
+            
+        else
+            puts "Opção não existe."
+           
+    end
+    
+end
+ login()
+   
+   
+
